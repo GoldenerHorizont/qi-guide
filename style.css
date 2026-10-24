@@ -1,0 +1,140 @@
+body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            background: #121212;
+            color: #e0e0e0;
+        }
+        h1 {
+            color: #003cff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        /* Tages-Gesamtbox */
+.day-section {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #333;
+}
+
+/* Rote Variante */
+.day-section.red {
+    background: #2b1616;
+    border-color: #592525;
+}
+
+/* Die Überschrift sitzt nun oben über die volle Breite */
+.day-section h2 {
+    color: #ffcc00;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Der Zwei-Spalten-Bereich unter der Überschrift */
+.day-grid {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Linke Spalte: Text & Liste */
+.day-content {
+    flex: 1;
+}
+
+.day-content p {
+    margin-bottom: 15px;
+    color: #b0b0b0;
+}
+
+.day-content ul {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.4;
+}
+
+.day-content li {
+    margin-bottom: 3px;
+}
+
+/* Rechte Spalte: Vorschaubild */
+.day-image {
+    flex: 0 0 320px;
+}
+
+.day-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #444;
+    transition: transform 0.2s, filter 0.2s;
+    display: block;
+}
+
+.day-image img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+/* Responsive Design für Smartphones */
+@media (max-width: 768px) {
+    .day-grid {
+        flex-direction: column;
+    }
+    .day-image {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+        .day-content :is(li, p):has(strong) {
+           color: #4ade80; /* Ein frisches, gut lesbares Grün für den Dark Mode */
+        }
+
+        .day-section p.red {
+            color: #f50303
+        }
+
+        /* Färbt einzelne Listeneinträge mit der Klasse .red rot ein */
+.day-content li.red {
+    color: #f50303; /* Ein angenehmes, gut lesbares Rot im Dark Mode */
+ 
+}
+
+        /* Lightbox / Modal für die Großansicht */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
