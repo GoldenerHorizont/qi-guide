@@ -1,2 +1,2 @@
 Find it under:
-https://goldenerhorizont.github.io/qi-guide/
+https://guardiansofdinegu.github.io/qi-guide/
